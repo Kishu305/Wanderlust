@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderlust</title>
+  <link href="login.html" rel="import"/>
+  <style>
+    /* WANDERLUST header heading*/
+  html, body{
+    margin: 0;
+    padding: 0;
+  }
+
+ .header {
+     color:rgb(13, 66, 46);
+     text-align: center;
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     font-size: xx-large;
+     float: center;
+     background-color:rgb(149, 209, 179);
+     width: 100%;
+     height: 150px;
+     padding-top: 1px;
+     }
+  /*For navigation bar*/
+ .topnav {
+     overflow: hidden;
+     background-color:rgb(37, 37, 41);
+     width:100%;
+     height:42px;
+     padding-top: 20px;
+     }
+     /*Style links inside the navigation bar*/
+    .topnav a{
+     color:aliceblue;
+     text-align: center;
+     padding: 15px 45px;
+     text-decoration-color:rgb(185, 190, 190) ;
+     font-size: 18px;
+    }
+    /*Add a colour to the active link*/
+    .topnav a.active{
+      background-color: rgb(116, 116, 126);
+      color: rgb(240, 248, 255);
+    }
+    /*Styling Buttons*/
+    .button{
+      float: right;
+      border: none;
+      text-align: center;
+      font-size: 16px;
+      margin:1px 2px;
+      
+      cursor: pointer;
+      }
+    .button1{
+      background-color: rgb(82, 143, 143);
+    }
+    .button2{
+      background-color:rgb(82, 143, 143);
+    }
+
+    @media screen and (max-width:500px){
+      navbar a{
+        float:none;
+        display: block;
+      }
+    }
+    
+
+
+    /*Features of slide show*/
+   .mySlides {display: none;
+    height: 100%;}
+   img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+
+
+/*slideshow*/
+    .main{
+  position:relative;
+  height:515px;
+  width:100%;
+  overflow:hidden;
+}
+.main .slider{
+  position:relative;
+  width:300%;
+  height:100%;
+  transition:0.3s linear;
+  overflow:hidden;
+  display:flex;
+}
+.main .slider .myslide{
+  position:relative;
+  height:100%;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  overflow:hidden;
+}
+.main .slider .myslide:nth-child(1){
+  background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_2580,c_limit/Aerial-One&OnlyReethiRah-Maldives-CRHotel.jpg');
+  background-size:100% 100%;
+  background-position:100% 100%;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+}
+.main .slider .myslide:nth-child(2){
+  background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-italy-cinque-terre-santa-margherita-00-index-1541710953.jpg');
+  background-size:100% 100%;
+  background-position:100% 100%;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+}
+.main .slider .myslide:nth-child(3){
+  background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('https://images.wallpaperscraft.com/image/single/forest_trees_fog_110131_1920x1080.jpg');
+  background-size:100% 100%;
+  background-position:100% 100%;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+}
+
+.main .slider .myslide h1{
+  position:relative;
+  background:#05f3fe;
+  color:#000;
+  font-size:6.5em;
+  padding:5px 15px;
+  font-weight:850;
+  mix-blend-mode:screen;
+  margin-right:505%;
+}
+.main .slider .myslide.active h1{
+   animation:animateheading 0.5s forwards 1;
+    animation-delay:0.3s;
+}
+@keyframes animateheading{
+  to{
+    margin-right:0;
+  }
+}
+@keyframes animateparagraph{
+  to{
+    margin-left:0;
+  }
+}
+.main .slider .myslide p{
+  position:relative;
+  background:#232323;
+  color:#f5f2d0;
+  font-size:1.2em;
+  font-weight:500;
+  width:auto;
+  text-align:center;
+  padding:10px 15px;
+  margin-top:1%;
+  margin-left:505%;
+  transition:0.3s linear;
+  transition-delay:0.3s;
+}
+.main .slider .myslide.active p{
+   animation:animateparagraph 0.5s forwards 1;
+    animation-delay:0.3s;
+}
+
+
+/*login*/
+/*outer window*/
+.bg-modal{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/*login form*/
+.popup{
+    position:absolute;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+.popup .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.form h2{
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+.form-element{
+    margin: 15px 0px;
+}
+.form-element label{
+    font-size: 14px;
+    color: #222;
+}
+.form-element input[type="text"],
+.form-element input[type="password"]{
+    margin-top: 5px;
+    display: block;
+    width: 93%;
+    padding: 10px;
+    outline: none;
+    border:1px solid #aaa;
+    border-radius: 5px;
+}
+.form-element input[type="checkbox"]{
+    margin-right: 5px;
+}
+.form-element button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline:none;
+    font-size: 16px;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;       
+}
+  .form-element a{
+      display: block;
+      text-align: right;
+      font-size: 15px;
+      color: #1a79ca;
+      text-decoration: none;
+      font-weight: 600;
+  }
+
+/*services*/
+.parallax{
+      background-image: url(https://wallpaperaccess.com/full/2118486.jpg);
+      min-height: 400px;
+      min-width: 100%;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      clear: both;
+  }
+    .services-text{
+        font-size: x-large;
+        color: rgb(77, 41, 71);
+        text-align:center ;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-decoration:overline;
+        text-decoration-color:rgb(148, 157, 165) ;
+        padding-bottom: 2px;
+        
+    }
+    .activities1{
+        border: 4px solid rgb(197, 74, 74);
+        width: 297px;
+        padding: 15px;
+        margin:20px;
+        border-style:groove;
+        float: left;
+        }
+    
+    .heading{
+        color: rgb(88, 158, 115);
+        text-align: centre;
+        font-size:x-large;
+    }
+    .para{
+        color: rgb(79, 160, 163);
+       font-size: larger;
+    }
+</style>
+</head>
+
+<body>
+  <!--For Wanderlust heading*-->
+<section>
+  <div class="header">
+     <h1>WANDERLUST</h1>
+  </div>
+</section>
+  <!--For navigation bar-->
+  <section>
+   <div class="topnav">
+    
+       <a class="active" href="#Home">Home</a>
+       <a href=" #Gallery">Gallery</a>
+       <a href="#Destinations">Destination</a>
+       <a href="#About Us">About Us</a>
+ <!--For creating efficient login button-->
+    <div class="button">
+      <a href="#" id="button1" class="button1">Login</a>
+      <a href="#" id="button2" class="button2">SignUp</a>
+      
+  </div>
+</section>
+
+<!--Slideshow-->
+<section>
+  <div class="main">
+    <div class="slider">
+      <div class="myslide active">
+          <h1>Life's beach</h1>
+        <p>Leave your footprints of love and kindness everywhere you go...</p>
+      </div>
+      <div class="myslide">
+          <h1>Flow together</h1>
+        <p>Travel,like whiskey are all good...</p>
+      </div>
+      <div class="myslide">
+          <h1>Wandering in Dark</h1>
+        <p>Place where you can meet your trueself in the cover most peaceful nature...</p>
+      </div>
+    </div>
+  </div>
+
+     <!-- Next and previous buttons -->
+       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<br>
+</section>
+
+<!--create modal-->
+<section>
+<div class="bg-modal">
+  <div class="modal-content">
+    <div class="popup">
+        <div class="close">&times;</div>
+        <div class="form">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password email">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <div class="form-element">
+                <button>Log in</button>
+            </div>
+            <div class="form-element">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!--services-->
+<section> 
+  <div class="services-text">
+    <h1>OUR SERVICES</h1>
+  </div>
+</section>
+
+<section>
+  <div class="service-container">
+    <section>
+      <div class="activities1">
+        <div class="heading">
+          <h1>Personalized Matching</h1>
+        </div>
+        <div class="para">
+          <p>Our unique matching system lets you find just the tour you want for your next holiday. </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="activities1">
+        <div class="heading">
+          <h1>Wide Variety of Tours</h1>
+        </div>
+        <div class="para">
+          <p> We offer a wide variety of personally picked tours with destinations all over the globe.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="activities1">
+        <div class="heading">
+          <h1>Highly Qualified Service</h1>
+        </div>
+        <div class="para">
+          <p> Our tour managers are qualified, skilled, and friendly to bring you the best service.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="activities1">
+        <div class="heading">
+          <h1>Customization of tours</h1>
+        </div>
+        <div class="para">
+          <p>We believe in providing wide variety of tours in the price that you can afford at anytime.</p>
+        </div>
+      </div>
+    </section>
+    </section>
+  </div>
+    <section>
+      <div class="parallax"></div>
+    </section>
+</section>
+
+  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<script>
+  window.onload = function(){
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+  
+    nextBtn.addEventListener('click',function(){
+      nextSlide();
+    });
+    prevBtn.addEventListener('click',function(){
+      prevSlide();
+    });
+}
+let slideNo = 0;
+const nextSlide = ()=>{
+    const slider = document.querySelector('.slider');
+    const slides = slider.getElementsByClassName('myslide');
+    const currentSlide = document.querySelector('.myslide.active');
+    
+    currentSlide.classList.remove('active');
+    slideNo = (slideNo + 1) % slides.length;
+    slider.style.marginLeft = '-'+slideNo+'00%';-100
+    slides[slideNo].classList.add('active');
+};
+const prevSlide = ()=>{
+    const slider = document.querySelector('.slider');
+    const slides = slider.getElementsByClassName('myslide');
+    const currentSlide = document.querySelector('.myslide.active');
+    
+    currentSlide.classList.remove('active');
+    slideNo = (slideNo - 1 + slides.length) % slides.length;
+    slider.style.marginLeft = '-'+slideNo+'00%';
+    slides[slideNo].classList.add('active');
+};
+
+document.getElementById('button1').addEventListener('click', function(){
+  document.querySelector('.bg-modal').style.display = 'flex';
+});
+
+document.querySelector('.close').addEventListener('click', function(){
+  document.querySelector('.bg-modal').style.display = 'none';
+});
+</script>
+  
+</body>
+</html>
