@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* WANDERLUST header heading*/
+      html, body{
+        margin: 0;
+        padding: 0;
+      }
+    
+     .header {
+         color:rgb(13, 66, 46);
+         text-align: center;
+         font-family:Georgia, 'Times New Roman', Times, serif;
+         font-size: xx-large;
+         float: center;
+         background-color:rgb(149, 209, 179);
+         width: 100%;
+         height: 150px;
+         padding-top: 1px;
+         }
+      /*For navigation bar*/
+     .topnav {
+         overflow: hidden;
+         background-color:rgb(37, 37, 41);
+         width:100%;
+         height:42px;
+         padding-top: 20px;
+         }
+         /*Style links inside the navigation bar*/
+        .topnav a{
+         color:aliceblue;
+         text-align: center;
+         padding: 15px 45px;
+         text-decoration-color:rgb(185, 190, 190) ;
+         font-size: 18px;
+        }
+        /*Add a colour to the active link*/
+        .topnav a.active{
+          background-color: rgb(116, 116, 126);
+          color: rgb(240, 248, 255);
+        }
+        /*Styling Buttons*/
+        .button{
+          float: right;
+          border: none;
+          text-align: center;
+          font-size: 16px;
+          margin:1px 2px;
+          
+          cursor: pointer;
+          }
+        .button1{
+          background-color: rgb(82, 143, 143);
+        }
+        .button2{
+          background-color:rgb(82, 143, 143);
+        }
+    
+        @media screen and (max-width:500px){
+          navbar a{
+            float:none;
+            display: block;
+          }
+        }
+</style>
+</head>
+<body>
+     <!--For Wanderlust heading*-->
+<section>
+    <div class="header">
+       <h1>WANDERLUST</h1>
+    </div>
+  </section>
+    <!--For navigation bar-->
+    <section>
+     <div class="topnav">
+      
+         <a class="active" href="#Home">Home</a>
+         <a href=" #Gallery">Gallery</a>
+         <a href="#Destinations">Destination</a>
+         <a href="#About Us">About Us</a>
+   <!--For creating efficient login button-->
+      <div class="button">
+        <a href="#" id="button1" class="button1">Login</a>
+        <a href="#" id="button2" class="button2">SignUp</a>
+        
+    </div>
+  </section>
+</body>
+</html>
